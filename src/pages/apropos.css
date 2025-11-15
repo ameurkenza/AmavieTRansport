@@ -1,0 +1,116 @@
+/* 🌈 Palette Amavie */
+:root {
+  --bleu-sarcelle: #008B8B;
+  --blanc: #FFFFFF;
+  --gris-anthracite: #2E2E2E;
+  --bleu-marine: #0A2342;
+  --beige-clair: #F5F2EB;
+}
+
+/* SECTION A PROPOS */
+.apropos-section {
+  width: 85%;
+  max-width: 1100px;
+  margin: 120px auto 80px auto; /* espace sous la navbar */
+  background-color: var(--blanc);
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0, 139, 139, 0.2);
+  padding: 50px 60px;
+}
+
+.apropos-section h1 {
+  color: var(--bleu-marine);
+  font-size: 2.4rem;
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 800;
+}
+
+.apropos-section h2 {
+  color: var(--bleu-marine);
+  margin-top: 50px;
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.apropos-section p {
+  font-size: 1.05rem;
+  margin-bottom: 20px;
+  color: var(--gris-anthracite);
+  line-height: 1.7;
+}
+
+.intro {
+  font-size: 1.2rem;
+  color: var(--bleu-marine);
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* VALEURS */
+/* VALEURS */
+.valeurs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 👉 4 cartes sur la même ligne */
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.valeur {
+  background-color: var(--beige-clair);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+}
+
+.valeur:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 139, 139, 0.25);
+}
+
+.valeur h3 {
+  color: var(--bleu-marine);
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 992px) {
+  .valeurs {
+    grid-template-columns: repeat(2, 1fr); /* 👉 2 cartes par ligne sur tablette */
+  }
+}
+
+@media (max-width: 600px) {
+  .valeurs {
+    grid-template-columns: 1fr; /* 👉 1 carte par ligne sur mobile */
+  }
+}
+/* Petite animation d'apparition */
+.fade-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s ease;
+}
+
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .apropos-section {
+    padding: 30px 20px;
+  }
+
+  .apropos-section h1 {
+    font-size: 2rem;
+  }
+
+  .apropos-section h2 {
+    font-size: 1.3rem;
+  }
+}

@@ -1,0 +1,246 @@
+/* Palette */
+:root {
+  --bleu-sarcelle: #008B8B;
+  --blanc: #FFFFFF;
+  --gris-anthracite: #2E2E2E;
+  --bleu-marine: #0A2342;
+  --beige-clair: #F5F2EB;
+}
+body {
+  background-color: #F5F2EB;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.hero {
+  background: linear-gradient(to top, var(--bleu-sarcelle) 0%, var(--beige-clair) 100%);
+  color: var(--bleu-marine);
+  text-align: center;
+  padding: 70px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-logo {
+  height: 250px;
+  margin-bottom: 15px;
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.25));
+  transition: transform 0.3s ease;
+}
+
+.hero h1 {
+  font-size: 2.4rem;
+  color: var(--blanc);
+  font-weight: 650;      /* super gras */
+  letter-spacing: 1px;   /* optionnel : plus élégant */
+}
+
+
+.hero p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 700px;
+  margin-bottom: 25px;
+}
+
+
+
+/* 🌿 QUI SOMMES-NOUS */
+.intro-section {
+  width: 90%;
+  max-width: 900px;
+  margin: 80px auto;
+  background-color: var(--blanc);
+  border-radius: 15px;
+  padding: 40px 30px;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(0, 139, 139, 0.15);
+  transition: 0.4s ease;
+}
+
+.intro-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 139, 139, 0.25);
+}
+
+.intro-section h2 {
+  color: var(--bleu-marine);
+  margin-bottom: 15px;
+  font-weight: 600;   /* ✔️ gras élégant */
+}
+
+
+
+.intro-section p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+/* Bouton Amavie */
+.btn-primary {
+  display: inline-block;
+  background-color: var(--bleu-sarcelle);
+  color: var(--blanc);
+  padding: 12px 28px;
+  border-radius: 50px;      /* forme très arrondie */
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+/* Effet hover */
+.btn-primary:hover {
+  background-color: #006f6f;  /* plus foncé */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Bouton Amavie */
+.btn-primary {
+  display: inline-block;
+  background-color: var(--bleu-sarcelle);
+  color: var(--blanc);
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  border: none;
+  transition: all 0.35s ease;    /* plus doux */
+
+  /* Pour l'effet glossy */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Effet glossy */
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 120%;
+  height: 100%;
+  background: rgba(255,255,255,0.35);
+  transition: left 0.4s ease;
+}
+
+.btn-primary:hover::before {
+  left: 120%;
+}
+
+/* Effet quand la souris reste dessus */
+.btn-primary:hover {
+  background-color: var(--blanc);      /* ➜ devient blanc */
+  color: var(--bleu-sarcelle);         /* ➜ texte turquoise */
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 139, 139, 0.35);
+}
+
+
+
+/* 💪 ENGAGEMENTS */
+.engagements {
+  width: 90%;
+  margin: 80px auto;
+  text-align: center;
+}
+
+.engagements h2 {
+  color: var(--bleu-marine);
+  margin-bottom: 40px;
+  font-weight: 700;       /* ✔️ gras professionnel */
+  letter-spacing: 0.5px;  /* ✔️ léger spacing pour l’élégance */
+}
+
+
+.engagements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.engagement {
+  background-color: var(--blanc);
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+}
+
+.engagement:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0, 139, 139, 0.25);
+}
+
+.engagement h3 {
+  color: var(--bleu-sarcelle);
+  margin-bottom: 10px;
+  font-weight: 700;       /* ✔️ gras professionnel */
+  letter-spacing: 0.5px;
+}
+
+
+
+
+/* ✉️ CONTACT RAPIDE */
+.contact-home {
+  text-align: center;
+  background: linear-gradient(to top, var(--bleu-sarcelle) 0%, var(--beige-clair) 100%);
+  color: var(--bleu-marine);
+  padding: 80px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-home h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  font-weight: 700;       /* ✔️ gras professionnel */
+  letter-spacing: 0.5px;
+}
+
+.contact-home p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  color: var(--gris-anthracite);
+}
+
+/* Effet de vague lumineuse sur le fond */
+.contact-home::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.12) 0%, transparent 70%);
+  animation: lightFlow 12s infinite linear;
+  pointer-events: none;
+}
+
+@keyframes lightFlow {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(60px, 60px); }
+  100% { transform: translate(0, 0); }
+}
+
+
+/* ✨ Animation d'apparition */
+.fade-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

@@ -1,0 +1,179 @@
+
+
+/* 🌈 Palette Amavie */
+:root {
+  --bleu-sarcelle: #008B8B;
+  --blanc: #FFFFFF;
+  --gris-anthracite: #2E2E2E;
+  --bleu-marine: #0A2342;
+  --beige-clair: #F5F2EB;
+}
+
+/* HEADER / NAVBAR */
+.amavie-navbar {
+  background-color: var(--beige-clair);
+  box-shadow: 0 4px 12px rgba(0, 139, 139, 0.25);
+  padding: 0; /* ✅ plus de padding vertical */
+  height: 90px; /* ✅ hauteur fixe et maîtrisée */
+  display: flex;
+  align-items: center;
+  backdrop-filter: blur(6px);
+  transition: all 0.4s ease;
+  width: 100%;
+  z-index: 1000;
+}
+
+
+.amavie-navbar.scrolled {
+  padding: 6px 0;
+  box-shadow: 0 6px 16px rgba(0, 139, 139, 0.35);
+}
+
+/* LOGO */
+.amavie-logo {
+  height: 200px; /* ✅ plus grand */
+  transition: transform 0.3s ease, filter 0.4s ease;
+  filter: drop-shadow(0 3px 6px rgba(0, 139, 139, 0.3)); /* ajoute une ombre douce */
+}
+
+
+.amavie-logo:hover {
+  transform: scale(1.08);
+  filter: brightness(1.2) drop-shadow(0 5px 10px rgba(0, 139, 139, 0.4));
+}
+
+
+/* NAVIGATION LINKS */
+.nav-links .nav-link {
+  color: var(--bleu-sarcelle);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
+  margin-right: 25px;
+}
+
+.nav-links .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--bleu-sarcelle);
+  transition: width 0.3s ease;
+}
+
+.nav-links .nav-link:hover::after,
+.nav-links .nav-link.active::after {
+  width: 100%;
+}
+
+.nav-links .nav-link:hover,
+.nav-links .nav-link.active {
+  color: var(--bleu-marine);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .amavie-logo {
+    height: 70px;
+  }
+
+  .nav-links {
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* === BOUTON BURGER === */
+.navbar {
+  display: flex;
+  align-items: center; /* ✅ centre verticalement tout */
+  position: relative;  /* ✅ nécessaire pour le positionnement du burger */
+}
+
+.navbar-toggler {
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  padding: 6px;
+  position: absolute; /* ✅ placé librement dans la navbar */
+  right: 25px;        /* ✅ à droite */
+  top: 50%;           /* ✅ centré verticalement */
+  transform: translateY(-50%); /* ✅ parfait centrage */
+  transition: all 0.3s ease;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active {
+  outline: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+/* Nettoyage complet du fond Bootstrap */
+.navbar-toggler-icon {
+  background: none !important;
+  background-image: none !important;
+  position: relative;
+  width: 25px;
+  height: 2px;
+  border-radius: 2px;
+}
+
+/* Trois barres turquoise */
+.navbar-toggler-icon,
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  background-color: #008B8B;
+  transition: all 0.3s ease;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 25px;
+  height: 2px;
+  border-radius: 2px;
+}
+
+.navbar-toggler-icon::before {
+  top: -7px;
+}
+
+.navbar-toggler-icon::after {
+  top: 7px;
+}
+
+
+
+
+
+/* MENU MOBILE - FOND BEIGE TRANSPARENT + FLU */
+@media (max-width: 992px) {
+  .navbar-collapse {
+    background: rgba(245, 242, 235, 0.90); /* beige transparent */
+    backdrop-filter: blur(12px);          /* effet verre givré */
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+    /* Pour que le menu ne se mélange PAS avec le hero */
+    z-index: 2000;
+    position: relative;
+  }
+}

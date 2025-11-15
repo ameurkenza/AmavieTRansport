@@ -1,0 +1,134 @@
+/* 🌈 PALETTE AMAVIE */
+:root {
+  --bleu-sarcelle: #008B8B;
+  --blanc: #FFFFFF;
+  --gris-anthracite: #2E2E2E;
+  --bleu-marine: #0A2342;
+  --beige-clair: #F5F2EB;
+}
+
+/* 🌄 FOND GLOBAL */
+.services-wrapper {
+  min-height: 100vh;
+  padding: 0 60px 100px;
+  background: linear-gradient(
+      135deg,
+      #008B8B,       /* bleu sarcelle */
+      #26A1A1,       /* bleu sarcelle éclairci 1 */
+      #66C3C3,       /* bleu sarcelle éclairci 2 */
+      #F5F2EB,       /* beige clair */
+      #008B8B        /* retour bleu sarcelle */
+  );
+  background-size: 400% 400%;
+  animation: gradientFlow 12s ease infinite;
+}
+
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 🏷️ BANNIÈRE */
+.services-banner {
+  text-align: center;
+  padding: 140px 40px 60px;
+  color: var(--blanc);
+}
+
+.services-banner h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.services-banner p {
+  font-size: 1.2rem;
+  max-width: 750px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+/* ⭐ SECTION CTA ULTRA VISIBLE */
+.cta-section {
+  text-align: center;
+  margin: 50px auto 90px;
+  padding: 40px 20px;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(6px);
+  border-radius: 20px;
+  max-width: 900px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+}
+
+.cta-phrase {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--blanc);
+  margin-bottom: 25px;
+}
+
+.cta-big-btn {
+  display: inline-block;
+  padding: 16px 45px;
+  background: var(--bleu-sarcelle);
+  color: var(--blanc);
+  font-size: 1.3rem;
+  font-weight: 700;
+  border-radius: 40px;
+  text-decoration: none;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.35);
+}
+
+.cta-big-btn:hover {
+  background: var(--bleu-marine);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.40);
+}
+
+/* 📦 SECTIONS */
+.services-section {
+  margin-top: 60px;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: var(--blanc);
+  margin-bottom: 25px;
+}
+
+/* 🧊 CARTES */
+.card-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 35px;
+}
+
+.service-card {
+  background: rgba(255, 255, 255, 0.80);
+  border-radius: 16px;
+  padding: 30px 25px;
+  flex: 1 1 calc(33.33% - 35px);
+  min-width: 280px;
+  border-left: 6px solid var(--bleu-sarcelle);
+  backdrop-filter: blur(6px);
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.18);
+  transition: 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-7px);
+  border-left-color: var(--bleu-marine);
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width: 992px) {
+  .services-wrapper { padding: 0 40px 80px; }
+}
+
+@media (max-width: 768px) {
+  .service-card { flex: 1 1 100%; }
+  .services-banner h1 { font-size: 2.4rem; }
+}
